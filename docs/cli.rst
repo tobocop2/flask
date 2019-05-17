@@ -68,6 +68,11 @@ parts:
     The ``create_app`` factory in ``hello`` is called with the string ``'dev'``
     as the argument.
 
+``FLASK_APP="hello:create_app('dev', key="val")"``
+    The ``create_app`` factory in ``hello`` is called with the string ``'dev'``
+    as a positional argument and ``val`` as the value for the ``'key'`` keyword
+    argument
+
 If ``FLASK_APP`` is not set, the command will try to import "app" or
 "wsgi" (as a ".py" file, or package) and try to detect an application
 instance or factory.
